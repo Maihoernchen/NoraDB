@@ -1,18 +1,18 @@
 # db
 
-TODO: Write a description here
+An open source ORDBMS using a superset of SQL as data languages.
 
 ## Installation
 
-TODO: Write installation instructions here
+Download the crystal language and compile the main.cr file from the GitHub-Repository.
 
 ## Usage
 
-TODO: Write usage instructions here
+TBA
 
 ## Development
 
-TODO: Write development instructions here
+TBA
 
 ## Contributing
 
@@ -24,4 +24,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [Maihoernchen](https://github.com/your-github-user) - creator and maintainer
+- [Maihoernchen](https://github.com/maihoernchen) - creator and maintainer
