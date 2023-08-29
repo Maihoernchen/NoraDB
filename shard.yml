@@ -3,6 +3,7 @@ version: 0.1.0
 
 authors:
   - Maihoernchen <72254540+Maihoernchen@users.noreply.github.com>
+  - Noyavy
 
 targets:
   db:

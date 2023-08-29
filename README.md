@@ -25,3 +25,4 @@ TBA
 ## Contributors
 
 - [Maihoernchen](https://github.com/maihoernchen) - creator and maintainer
+- [Noyavy](https://github.com/noyavy) - creator and maintainer
