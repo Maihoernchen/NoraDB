@@ -1,0 +1,13 @@
+name: db
+version: 0.1.0
+
+authors:
+  - Maihoernchen <72254540+Maihoernchen@users.noreply.github.com>
+
+targets:
+  db:
+    main: src/db.cr
+
+crystal: 1.9.2
+
+license: MIT
