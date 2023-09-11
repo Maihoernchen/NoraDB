@@ -1,7 +1,7 @@
-
 # http://www.graphviz.org/content/cluster
 
 digraph G {
+  compound=true;
   rankdir = "LR";
   graph [fontname = "Handlee"];
   node [fontname = "Handlee"];
@@ -11,12 +11,43 @@ digraph G {
 
   subgraph cluster_0 {
     style=filled;
-    color=lightgrey;
-    node [style=filled,color=pink];
-    Dancer1; Dancer2; Dancer3; Dancer4;
-    label = "*Floor*";
+    color=green;
+    node [style=filled,color=white];
+    label = "*Server*";
     fontsize = 20;
+    subgraph cluster_4 {
+        label = "*Club*";
+        color=blue;
+        node [style=filled,color=white];
+        "ClubManager (DBMS)"->DJ;
+        "ClubManager (DBMS)"->DJ2;
+        subgraph cluster_3 {
+            label = "*Floor1*";
+            color=yellow;
+            DJ -> Dancer1 [lhead=cluster_1, label="collects metadata"];
+            subgraph cluster_1 {
+                label = "*Dancers*"
+                Dancer1; Dancer2; Dancer3; Dancer4;
+            }
+        }
+        subgraph cluster_5 {
+            label = "*Floor2*";
+            color=yellow;
+            DJ2 -> Dancer5 [lhead=cluster_6, label="collects metadata"];
+            subgraph cluster_6 {
+                label = "*Dancers2*"
+                Dancer5; Dancer6; Dancer7; Dancer8;
+            }
+        }
+    }
   }
-
+  subgraph cluster_2 {
+      color=red
+      style=filled;
+      node [style=filled,color=white];
+      label = "*Client*";
+      ClientSoftware->"DJ";
+      ClientSoftware->"DJ2";
+  }
   
 }
