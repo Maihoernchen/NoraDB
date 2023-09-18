@@ -26,6 +26,7 @@ digraph G {
             color=yellow;
             DJ -> Dancer1 [lhead=cluster_1, label="collects metadata"];
             subgraph cluster_1 {
+                color=purple;
                 label = "*Dancers*"
                 Dancer1; Dancer2; Dancer3; Dancer4;
             }
@@ -35,6 +36,7 @@ digraph G {
             color=yellow;
             DJ2 -> Dancer5 [lhead=cluster_6, label="collects metadata"];
             subgraph cluster_6 {
+                color=purple;
                 label = "*Dancers2*"
                 Dancer5; Dancer6; Dancer7; Dancer8;
             }
