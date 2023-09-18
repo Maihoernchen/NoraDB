@@ -6,28 +6,35 @@
 # import possible tokens
 require "json"
 
-json = File.open("./tokens.json") do |file|
+SRC = File.open("../rec/tokens.json") do |file|
     JSON.parse(file)
 end
 
 # get tokens from json
-keys= json["keys"];
-spec = json["specifications"];
-aggr = json["aggregates"];
-
-# test
-p! json["keys"]["SELECT"];
-
+KEYS = SRC["keys"];
+SPEC = SRC["specifications"];
+AGGR = SRC["aggregates"];
 
 # grab next token (faulty, fix next session)
 def nextToken(cmd)
+    endpoint = cmd.index(" ")
+    p! typeof(endpoint.as(Int32))
+    token = cmd[0, endpoint.as(Int32)]
     i = 0
-    stop = cmd.index(" ")
-    while cmd < stop-1
-        counter += 1
-        puts "Counter: #{counter}"
+    j = 0
+    k = 0
+    l = 0
+    while i < 2
+        while j < 15
+            p! KEYS[j]
+        end
+        while k < 9
+
+        end
+        while l < 11
+
+        end
     end
-    # re
 end
 
 # removes last token
@@ -43,3 +50,5 @@ def interpret(cmd)
         puts "Error with QL-Syntax. Unexpected token #{nextToken}"
     end
 end
+
+interpret("SELECT * FROM ente")
