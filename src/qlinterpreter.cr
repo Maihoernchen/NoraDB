@@ -11,10 +11,6 @@ KEYS = ["SELECT","SELECT *","SELECT DISTINCT","SELECT INTO","SELECT TOP","CREATE
 SPEC = ["WHERE","AND","OR","BETWEEN","LIKE","IN","IS NULL","IS NOT NULL","FROM"];
 AGGR = ["COUNT","SUM","AVG","MIN","MAX","GROUP BY","HAVING","ORDER BY","DESC","OFFSET","FETCH"];
 
-p! KEYS[5];
-p! SPEC[2];
-p! AGGR[3];
-
 
 # grab next token (faulty, fix next session)
 def nextToken(cmd,first)
